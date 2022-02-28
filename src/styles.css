@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right bottom,
+    #2c528b,
+    #226593,
+    #2b7697,
+    #438599,
+    #5f949b
+  );
+}
+
+body header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+body header .img-header {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  background-image: url(./img/Weather+Targeting.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body header .input-city {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+
+body header h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #ecfeff;
+}
+
+body header .input-city input {
+  width: 60%;
+  max-width: 300px;
+  padding: 5px 15px;
+  border: 1px solid #d8e0fd;
+  border-radius: 10px;
+  outline: none;
+  font-weight: bold;
+}
+
+body header .input-city button {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #5f799e;
+}
+
+.cardWeather {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right bottom,
+    #284571,
+    #285a7f,
+    #326e8a,
+    #468193,
+    #5f949b
+  );
+  box-shadow: 16px 2px 15px 11px rgba(255, 254, 254, 0.1);
+
+  text-align: center;
+  font-size: 2rem;
+  color: whitesmoke;
+}
+.cardWeather .imgWeather {
+  width: 100px;
+}
