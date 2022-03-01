@@ -8,7 +8,7 @@ async function fetchCity(){
     let cityName = inputCity.value
     cityName = cityName.charAt(0).toUpperCase() + cityName.slice(1)
 
-    const URLCity = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${APIkey}&lang=es`
+    const URLCity = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${APIkey}&lang=es`
     const reqCity = await fetch(URLCity)
     const cityJson = await reqCity.json()
     let dataCity = [cityJson[0].lat, cityJson[0].lon]
@@ -19,7 +19,7 @@ async function fetchCity(){
     //Consultar Clima
     const lat = dataCity[0]
     const lon = dataCity[1]
-    const URLApi = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&lang=es`
+    const URLApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&lang=es`
     const reqWeather = await fetch(URLApi)
     const weatherJson = await reqWeather.json()
     console.log(weatherJson)
@@ -42,7 +42,7 @@ async function fetchCity(){
 
 
     nCity.textContent = `Ciudad: ${weatherJson.name}`
-    imgWheater.src = `http://openweathermap.org/img/wn/${weatherJson.weather[0].icon}@2x.png`
+    imgWheater.src = `https://openweathermap.org/img/wn/${weatherJson.weather[0].icon}@2x.png`
     temp.textContent = `temperatura: ${parseInt(weatherJson.main.temp - 273.15)}° C`
     descriptionValue.textContent = `${weatherJson.weather[0].description}`
 
