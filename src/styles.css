@@ -72,6 +72,12 @@ body header .input-city button {
   border: 1px solid transparent;
   border-radius: 5px;
   background-color: #285a7f;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+body header .input-city button:hover {
+  transform: scale(1.05);
 }
 
 #root {
@@ -83,7 +89,7 @@ body header .input-city button {
   display: flex;
   flex-direction: column;
   width: 90%;
-  min-height: 200px;
+  min-height: 260px;
   max-width: 500px;
   justify-content: center;
   align-items: center;
@@ -107,4 +113,14 @@ body header .input-city button {
 }
 .cardWeather .imgWeather {
   width: 100px;
+}
+
+.titleText {
+  font-size: 2rem;
+}
+.text {
+  width: 70%;
+  min-width: 200px;
+  margin: 20px 0;
+  font-size: 1.6rem;
 }
