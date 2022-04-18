@@ -38,6 +38,10 @@ async function fetchCity() {
   const URLApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&lang=es`;
   const reqWeather = await fetch(URLApi);
   const weatherJson = await reqWeather.json();
+  const imgSrcweather = await fetch(
+    `https://openweathermap.org/img/wn/${weatherJson.weather[0].icon}@2x.png`
+  );
+  console.log(imgSrcweather);
   console.log("segundo", weatherJson);
   // console.log(weatherJson)
 
@@ -61,7 +65,7 @@ async function fetchCity() {
   //   console.log(weatherJson.sys);
   nCity.textContent = `Ciudad: ${cityJson[0].name}`;
   nCountry.textContent = `Pais: ${countryCode[1]}`;
-  imgWheater.src = `https://openweathermap.org/img/wn/${weatherJson.weather[0].icon}@2x.png`;
+  imgWheater.src = imgSrcweather.url;
   temp.textContent = `temperatura: ${parseInt(
     weatherJson.main.temp - 273.15
   )}° C`;
